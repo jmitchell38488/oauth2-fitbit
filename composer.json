@@ -1,0 +1,35 @@
+{
+    "name": "healthand/oauth2-fitbit",
+    "description": "OAuth 2.0 wrapper for the FitBit API using thephpleague OAuth 2.0 client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Justin Mitchell",
+            "email": "jmitchell38488@gmail.com",
+            "homepage": "https://github.com/jmitchell38488",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "league/oauth2-client": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "keywords": [
+        "oauth",
+        "oauth2",
+        "fitbit"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Healthand\\OAuth2\\Client\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Healthand\\OAuth2\\Client\\Test\\": "test/src/"
+        }
+    }
+}
