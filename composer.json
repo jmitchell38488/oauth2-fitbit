@@ -24,7 +24,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Healthand\\OAuth2\\Client\\": "src"
+            "Jmitchell38488\\OAuth2\\Client\\": "src"
         }
     },
     "autoload-dev": {
