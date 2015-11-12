@@ -38,7 +38,7 @@ timed out.
 #### Authenticate session
 ```php
 session_start();
-use Healthand\OAuth2\Client\Provider\FitBitAuthorization;
+use Jmitchell38488\OAuth2\Client\Provider\FitBitAuthorization;
 require_once __DIR__ . '/vendor/autoload.php';
 
 $provider = new FitBitAuthorization([
@@ -107,7 +107,7 @@ if (!isset($_SESSION['oauth2state'])) {
 #### Authenticate session
 ```php
 session_start();
-use Healthand\OAuth2\Client\Provider\FitBitImplicit;
+use Jmitchell38488\OAuth2\Client\Provider\FitBitImplicit;
 require_once __DIR__ . '/vendor/autoload.php';
 
 $provider = new FitBitImplicit([
@@ -148,6 +148,11 @@ if (!isset($_SESSION['oauth2state'])) {
 ## Making requests
 The API endpoints can be found in either the [official API docs](https://dev.fitbit.com/docs)
 or the [API explorer](https://apigee.com/me3/embed/console/fitbit?apig_cc=1).
+
+It's important to use the FitBit class intead of the grant flow classes, because
+FitBit API requires that you use the Bearer token in the Authorization header, 
+rather than the Basic token. If you don't use the FitBit class, the API will
+return a 401 unauthorized error.
 
 ### To make a request
 ```php

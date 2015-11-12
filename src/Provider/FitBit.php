@@ -1,13 +1,30 @@
 <?php
+/**
+ * This file is part of the jmitchell38488/oauth2-fitbit library
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @copyright Copyright (c) Justin Mitchell <jmitchell38488@gmail.com>
+ * @license http://opensource.org/licenses/MIT MIT
+ * @link https://packagist.org/packages/Jmitchell38488/oauth2-fitbit Packagist
+ * @link https://github.com/jmitchell38488/oauth2-fitbit GitHub
+ */
 
-namespace Healthand\OAuth2\Client\Provider;
+namespace Jmitchell38488\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
 
 /**
- * Represents a FitBit request service provider that's based on the authorization
- * grant flow and may be used to interact with the OAuth 2.0 service provider, 
- * using Bearer token authentication
+ * <p>Represents a FitBit OAuth 2.0 service provider.</p>
+ * <p>This extends from the
+ * <b>FitBitAuthorization</b> class to uses the authorization grant flow to 
+ * make requests with the API. You can use either this class, or the 
+ * <b>FitBitAuthorization</b> class to make authorization grant flow requests.</p>
+ * 
+ * <p>This class is inteded to be used after authorization is made, because it
+ * uses the <em>Bearer</em> token that's returned from the API authorization, rather
+ * than the <em>Basic</em> token that's used as part of the authorization.</p>
  */
 class FitBit extends FitBitAuthorization
 {
