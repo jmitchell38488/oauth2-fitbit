@@ -25,6 +25,11 @@ use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
  * <p>This class is inteded to be used after authorization is made, because it
  * uses the <em>Bearer</em> token that's returned from the API authorization, rather
  * than the <em>Basic</em> token that's used as part of the authorization.</p>
+ * 
+ * @link https://dev.fitbit.com/docs/oauth2/ FitBit API Docs
+ * @author Justin Mitchell <jmitchell38488@gmail.com>
+ * @since 0.1
+ * @package Jmitchell38488\OAuth2\Client\Provider
  */
 class FitBit extends FitBitAuthorization
 {

@@ -23,8 +23,13 @@ use Psr\Http\Message\ResponseInterface;
  * grant flows for creating sessions, an authorization grant flow that is
  * intended to be used by servers, and an implicit grant flow that is intended
  * to be used by browsers. Both implementations extend this class.
+ * 
+ * @link https://dev.fitbit.com/docs/oauth2/ FitBit API Docs
+ * @author Justin Mitchell <jmitchell38488@gmail.com>
+ * @since 0.1
+ * @package Jmitchell38488\OAuth2\Client\Provider
  */
-class AbstractFitBit extends AbstractProvider
+abstract class AbstractFitBit extends AbstractProvider
 {
     /**
      * No user prompt on authorization
